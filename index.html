@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<title>Desafio LADS</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+	#aprox {color:black;font-weight:bold;padding:10px 0}
+</style>
+<BODY>
+	<header>
+		<form name="form1" method="GET" style="text-align: center; margin: 10px auto 0 auto;">
+		<input type="radio" name="radioo" value="letra"> Letra <input type="radio" name="radioo" value="filme"> Filme
+		</form>
+		<p>
+			<input type="text" id="valor">
+			<input type="submit" value="Buscar" id="botao">
+		</p>
+	</header>
+	<div id="hi" class="hidden" style="display:none">
+		<!--- ESPECIFICAÇÃO DE CANTOR E MÚSICA -->
+        <span style='color:black;'>
+			<b>Artist:</b> <i id='artista'>Jorge e Mateus</i> <!--ONDE ESTÁ JORGE E MATEUS, TROCAR POR UM CANTOR DE SUA PREFERENCIA E PESQUISAR SUA MÚSICA-->
+            <b>Song:</b> <i id='music'></i> <!--A MUSICA VOCÊ DEVE COLOCAR NA CAIXA DE TEXTO DA PÁGINA-->
+		</span>
+
+		<!--- ESPECIFICAÇÃO PARA ONDE AS LETRAS VÃO APARECER NA TELA -->
+		<a target=_blank style='float:right;font-size:10px;color:#000;text-decoration:none;font-weight:bold' href="http://www.vagalume.com.br/"><img style="border: 0;height: 70px;" src="/logo.jpg" alt="Vagalume"><br/>Letras de Músicas</a>
+		<div id='letra' style='width:400px;text-align:left; font-size: 20px;'>
+			<pre class=text>Buscando letras... <img src="http://www.vagalume.com.br/images/processing.gif"></pre>
+		</div>
+		
+	</div>
+	<div class="row" id="c2">
+			
+	</div>
+	<script src="/script.js"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		exibirFilme();
+	</script>
+</BODY>
+</HTML>
